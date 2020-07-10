@@ -3,9 +3,9 @@ package kasirPackage
 import kotlin.collections.ArrayList
 
 class Member (val namaMember: String): Pelanggan() {
-    val arrayNama = ArrayList<String>()
-    val arrayHarga = ArrayList<Int>()
-    val arrayJumlah = ArrayList<Int>()
+    private val arrayNama = ArrayList<String>()
+    private val arrayHarga = ArrayList<Int>()
+    private val arrayJumlah = ArrayList<Int>()
 
     override fun inputPembelianBarang() {
         do {
