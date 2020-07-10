@@ -3,7 +3,7 @@ package kasirPackage
 import java.util.*
 import kotlin.collections.ArrayList
 
-class Member (val namaMember: String): Pelanggan() {
+class NonMember: Pelanggan() {
     val arrayNama = ArrayList<String>()
     val arrayHarga = ArrayList<Int>()
     val arrayJumlah = ArrayList<Int>()
@@ -12,7 +12,7 @@ class Member (val namaMember: String): Pelanggan() {
         do {
             println("""
             -----------------------------
-            Checkout Pelanggan Member $namaMember
+            Checkout Pelanggan Non Member 
             -----------------------------
         """.trimIndent())
 
@@ -45,7 +45,7 @@ class Member (val namaMember: String): Pelanggan() {
     override fun hitungTotalBelanja() {
         println("""
             -----------------------------
-            Checkout Pelanggan Member $namaMember
+            Checkout Pelanggan Non Member 
             -----------------------------
         """.trimIndent())
 
@@ -65,15 +65,15 @@ class Member (val namaMember: String): Pelanggan() {
             -----------------------------
         """.trimIndent())
 
-        if (totalBelanja>50000) {
-            val diskon = totalBelanja.toDouble() * 9.5 / 100
+        if (totalBelanja>70000) {
+            val diskon = totalBelanja.toDouble() * 4.1 / 100
             totalBelanja = totalBelanja - diskon.toInt()
             println("""
                 Selamat! karena total belanjaan
-                $namaMember lebih besar dari Rp. 50000,
-                maka mendapatkan potongan sebesar 9.5%
+                lebih besar dari Rp. 70000,
+                maka mendapatkan potongan sebesar 4.1%
 
-                $namaMember cukup membayar Rp. $totalBelanja
+                Cukup Bayar Rp. $totalBelanja
             """.trimIndent())
         }
 
@@ -83,7 +83,7 @@ class Member (val namaMember: String): Pelanggan() {
     override fun pembayaran(totalBelanja: Int) {
         print("""
             -----------------------------
-            Checkout Pelanggan Member $namaMember
+            Checkout Pelanggan Non Member 
             -----------------------------
             Total Belanja : Rp. $totalBelanja
             
@@ -95,7 +95,7 @@ class Member (val namaMember: String): Pelanggan() {
                 print("Uang Costumer kurang")
             }else{
                 val kembalian = uangCostumer.toInt() - totalBelanja
-                    println("""
+                println("""
                     -----------------------------
                     Kembalian : Rp. $kembalian
                     -----------------------------

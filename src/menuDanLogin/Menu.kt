@@ -1,5 +1,8 @@
 package menuDanLogin
 
+import kasirPackage.Member
+import kasirPackage.NonMember
+
 class Menu {
     fun menu(){
         do {
@@ -56,8 +59,20 @@ class Menu {
         """.trimIndent())
 
         when(readLine()){
-            "1" -> print("Checkout Pelanggan")
-            "0" -> print("Terimakasih Telah Mengakses Kami")
+            "1" -> {
+                print(
+                    """
+                    -----------------------------
+                    Checkout Pelanggan Member
+                    -----------------------------
+                    Input Nama Member : 
+                """.trimIndent()
+                )
+
+                val namaMember = readLine().toString()
+                Member(namaMember).inputPembelianBarang()
+            }
+            "2" -> NonMember().inputPembelianBarang()
         }
     }
 }

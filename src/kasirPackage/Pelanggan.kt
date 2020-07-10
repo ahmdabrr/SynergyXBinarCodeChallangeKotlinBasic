@@ -1,10 +1,10 @@
 package kasirPackage
 
-abstract class Pelanggan : Barang {
+abstract class Pelanggan{
 
     abstract fun inputPembelianBarang()
 
     abstract fun hitungTotalBelanja()
 
-    abstract fun pembayaran()
+    abstract fun pembayaran(totalBelanja: Int)
 }
