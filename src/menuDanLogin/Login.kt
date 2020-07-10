@@ -9,11 +9,11 @@ class Login {
             -----------------------------
             Selamat Datang di SYNRGY Mart
             -----------------------------
-            +menudanlogin.Login Kasir+
+            +Login Kasir+
             Username    : 
         """.trimIndent())
         val inputUsername = readLine()
-        print("Password   : ")
+        print("Password    : ")
         val inputPassword = readLine()
         print("--------------------------")
 

@@ -1,6 +1,5 @@
 package kasirPackage
 
-import java.util.*
 import kotlin.collections.ArrayList
 
 class Member (val namaMember: String): Pelanggan() {
@@ -36,8 +35,9 @@ class Member (val namaMember: String): Pelanggan() {
                 Input Barang lagi?
                 Masukan Inputan (Y/T) :
             """.trimIndent())
-            val inputan = readLine()
-        } while (inputan == "y")
+            val inputan = readLine() !!
+            val inputanChar : Char = inputan.single()
+        } while (inputanChar == 'Y')
 
         hitungTotalBelanja()
     }
